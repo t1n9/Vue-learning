@@ -14,7 +14,17 @@
 
 <script>
     const app = Vue.createApp({
-        template:'<div>hello world</div>'
+        data(){
+            return{
+                content:0
+            }
+        },
+        mounted(){
+            setInterval(()=>{
+                this.content += 1;
+            },100)
+        },
+        template:'<div>{{content}}hello world</div>'
     });
     const vm = app.mount('#root');
 </script>
