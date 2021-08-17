@@ -33,7 +33,10 @@
                 <input v-model="inputValue"
                 @keydown.enter="handleAddItem"
                 >
-                <button @click="handleAddItem">增加</button>
+                <button 
+                @click="handleAddItem"
+                v-bind:title="inputValue"
+                >增加</button>
                 <li v-for="item of list">{{item}}</li>
             </div>
         `
